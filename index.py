@@ -1,26 +1,63 @@
-num1 = int(input("ingresa el primer numero:"))
+#-----variables---------------------#
+
+
+num1 = int(input("ingresa el primer numero: "))
 
 print("El primer numero es :" , num1)
-num2 = int(input("ingresa el segundo numero:"))
+num2 = int(input("ingresa el segundo numero: "	))
 
 print("El segundo numero es :" , num2)
+contador = True
 
-operacion= str(input("¿Que deseas hacer?"+"\n suma \n resta \n multiplicacion \n divicion "))
+operacion= int(input("""¿ingresa el numero de la operacion que deseas hacer?""))
+			\n 1 suma 
+			\n 2 resta 
+			\n 3 multiplicacion
+ 			\n 4 divicion 
+			\n 5 apagar calculadora \n 
+			numero :"""))
 
 
 
 
-if operacion == "suma":
-	print("Tu respuesta es :" ,num1 + num2)
+#-----condiciones---------------------#
 
-if operacion == "resta":
-	print("Tu respuesta es :" ,num1 - num2)
+while contador ==True:
+	if operacion == 1:
+		print("Tu respuesta es :" ,num1 + num2 ," \n ")
+		
 
-if operacion == "multiplicacion":
-	print("Tu respuesta es :" ,num1 * num2)
+	elif operacion == 2:
+		print("Tu respuesta es :" ,num1 - num2," \n ")
 
-if operacion == "divicion":
-	print("Tu respuesta es :" ,num1 / num2)
+	elif operacion == 3:
+		print("Tu respuesta es :" ,num1 * num2," \n ")
 
-else:
-	print("la calculadora se a apagado")
+	elif operacion == 4:
+		print("Tu respuesta es :" ,num1 / num2," \n ")
+
+	elif operacion == 5:
+		print("la calculadora se a apagado"," \n ")
+		contador= False
+		break
+	
+	else:
+		print("ou ese numero no esta disponible  intentemolos de nuevo")
+
+
+
+	print("intentemolos de nuevo")
+	
+	num1 = int(input("ingresa el primer numero:"))
+	num2 = int(input("ingresa el segundo numero:"))
+	operacion= int(input("""¿ingresa el numero de la operacion que deseas hacer?""
+			\n 1 suma 
+			\n 2 resta 
+			\n 3 multiplicacion
+ 			\n 4 divicion 
+			\n 5 apagar calculadora \n 
+			numero :"""))
+
+
+
+print("el programa a finalizado")
